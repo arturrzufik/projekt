@@ -12,8 +12,22 @@
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
+    <!-- <main>
+        <div class="Formularz">
+            <form action="./" method="post">
+                <label class="tabelka_ip"> Podaj adres IP (IPv4) : <input class="ip" name="ip" type='text' minlength = '8' maxlenght = '16'></label><br /><br />
+
+                <label class="tabelka_maska"> Podaj maskę (8-32) : <input class="maska" name="maska" type='number' min="8" max="32"></label><br />
+
+                <button type="submit"> Oblicz</button>
+            </form>
+        </div>
+
+    </main> -->
+
     <!-- MENU -->  
     <header>
         <nav class="navigation" id="panel-menu">
@@ -37,11 +51,14 @@
     </div>
         </nav>
     </header>
-
     <main>
-    <div class="tresc-main">
+        <div class="tresc-main">
                 <h1 class="tytul-main">KALKULATOR IP</h1>
                 </div>
+
+
+
+    <!-- Sekcja 1 -->               
     <div class="formularz" id="formularz">
             <div class="formularz-input">
                 <form action="./" method="post">
@@ -49,32 +66,21 @@
 
                     Podaj maskę: <input class="css-input" name="maska" type='number' min="8" max="32"><br /><br />
                     <div class="przyciski">
-                        <br><button class="myButton"> Adres sieciowy </button>
-                        <button type="submit" class="myButton-2"> Adres rozgłoszeniowy </button>
-                        <button type="submit" class="myButton"> Ilość hostów </button><br><br>
-                        <button type="submit" class="myButton"> Ilość podsieci </button>
-                        <button type="submit" class="myButton"> Host min/max </button>
-                        <button type="submit" class="myButton"> Klasa sieci </button><br><br>
-                        <button type="submit" class="myButton-wszystko" id= "myButton-wszystko" onclick="myFunction()"> OBLICZ WSZYSTKO </button>
+                        <br><a href="#" class="myButton"> Adres sieciowy </a>
+                        <a href="#" class="myButton-2"> Adres rozgłoszeniowy </a>
+                        <a href="#" class="myButton"> Ilość hostów </a><br><br>
+                        <a href="#" class="myButton"> Ilość podsieci </a>
+                        <a href="#" class="myButton"> Host min/max </a>
+                        <a href="#" class="myButton"> Klasa sieci </a><br><br>
+                        <a href="#" class="myButton-wszystko"> OBLICZ WSZYSTKO </a>
 
                     </div>
                 </form>
-
-<script>
-    document.getElementByID("wynik-wszystko").onClick = function() {myFunction()};
-
-    function myFunction(){
-        document.getElementById("table").classList.toggle("show");
-    }
-</script>
-
             </div>
     </div>
-    </main>
+    <div class="sekcja"></div>
 
-
-<?php
-
+    <?php
 
         //zapobiegamy wyskakiwaniu błędów przed wprowadzeniem danych
         if(!empty($_POST)){
@@ -123,7 +129,7 @@
     
 
                 //wyswietlamy wynik
-            // echo("Podany adres w wersji binarnej: " . $str_adresIP_polaczony_binarnie . " \n ");
+            echo("Podany adres w wersji binarnej: " . $str_adresIP_polaczony_binarnie . " \n ");
 
         //zamiana maski na system binarny
 
@@ -166,10 +172,10 @@
             
 
             //AKAPIT
-            // echo('<br />');
-            // echo("\n Maska przedstawiona binarnie: " . $maska_binarnie_podzielona);
-            // echo('<br />');
-            // echo("Maska przedstawiona dziesietnie: " . maska_na_dziesietny($tablica_maska_dziesietnie_podzielna));
+            echo('<br />');
+            echo("\n Maska przedstawiona binarnie: " . $maska_binarnie_podzielona);
+            echo('<br />');
+            echo("Maska przedstawiona dziesietnie: " . maska_na_dziesietny($tablica_maska_dziesietnie_podzielna));
 
             //dzielimy sobie adres sieci i maskę na pojecyńcze cyfry
                 $str_adresIP_polaczony_binarnie_bez_kropek = implode("", $int_adresIP_rozdzielony_binarnie);
@@ -274,32 +280,31 @@
                     $adres_rozgloszeniowy_dziesietnie = adres_dziesietnie($adres_rozgloszeniowy_binarnie);
                     $host_maksimum = host_max($adres_rozgloszeniowy_dziesietnie);
 
+
+
+            //drukujemy wynik
+
+            
+            print_r("<br /> Adres sieci dziesietnie: " . $adres_sieci_dziesietnie);
+            print_r("<br /> Klasa sieci: " . $klasa_sieci);
+            print_r("<br />");
+
+            print_r("<br /> Adres rozgłoszeniowy binarnie: " . $adres_rozgloszeniowy_binarnie);
+            print_r("<br /> Adres rozgłoszeniowy dziesietnie: " . $adres_rozgloszeniowy_dziesietnie);
+            print_r("<br />");
+
+            print_r("<br /> Maksymalna ilość adresów: " . pow(2, $ile_hostow));
+            print_r("<br /> Maksymalna ilość podsieci: " . pow(2, $ile_hostow)-2);
+            print_r("<br /> Ilość hostów w sieci: " . 2);
+            print_r("<br /> Host min: " . $host_minimum);
+            print_r("<br /> Host max: " . $host_maksimum);
+            print_r("<br />");
+            
                     
-                    function dzielone($host){
 
-                        $host_podzielony = explode('.', $host);
 
-                        for($i=0;$i<count($host_podzielony); $i++){
-                            
-                            $na_bin[$i] = decbin($host_podzielony[$i]);
-                        };
-                        
-                        for($j=0;$j<4;$j++){
-                            $ile = strlen($na_bin[$j]);
-                            while($ile<8){
-                                $na_bin[$j] = ("0" . $na_bin[$j]);
-                                $ile = strlen($na_bin[$j]);
-                            }
-                        }
 
-                        $host_binarnie = implode('.', $na_bin);
 
-                        return $host_binarnie;
-                    };
-
-                    $host_minimum_binarnie = dzielone($host_minimum);
-                    $host_maksimum_binarnie = dzielone($host_maksimum);
-        
         }
     }
 
@@ -307,65 +312,10 @@
 
 
 
-<!-- WYNIKI -->
-
-<div class="tresc-main">
-                <h1 class="tytul-main">WYNIKI</h1>
-                </div>
-<div class="formularz" id="formularz">
-<table class="my-table" id="table">
-    <br>
-  <thead>
-    <tr>
-      <th>       </th>
-      <th class = "mniejszy">binarnie</th>
-      <th class = "mniejszy">dziesiętnie</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Adres Sieci</td>
-      <td class="srodek"><?php print_r($adres_sieci_binarnie) ?></td>
-      <td class="srodek"><?php print_r($adres_sieci_dziesietnie) ?></td>
-    </tr>
-    <tr>
-      <td>Adres Rozgłoszeniowy</td>
-      <td class="srodek"><?php print_r($adres_rozgloszeniowy_binarnie) ?></td>
-      <td class="srodek"><?php print_r($adres_rozgloszeniowy_dziesietnie) ?></td>
-    </tr>
-    <tr>
-      <td>Maska</td>
-      <td class="srodek"><?php print_r($maska_binarnie_podzielona) ?></td>
-      <td class="srodek"><?php print_r(maska_na_dziesietny($tablica_maska_dziesietnie_podzielna)) ?></td>
-    </tr>
-    <tr>
-        <td> Hostów w sieci </td>
-        <td class="srodek"><?php print_r(pow(2, $ile_hostow)-2) ?></td>
-    </tr>
-    <tr>
-        <td> Klasa sieci </td>
-        <td class="srodek"><?php print_r($klasa_sieci) ?></td>
-    </tr>
-    <tr>
-      <td>Host min</td>
-      <td class="srodek"><?php print_r($host_minimum_binarnie) ?></td>
-      <td class="srodek"><?php print_r($host_minimum) ?></td>
-    </tr>
-    <tr>
-      <td>Host max</td>
-      <td class="srodek"><?php print_r($host_maksimum_binarnie) ?></td>
-      <td class="srodek"><?php print_r($host_maksimum) ?></td>
-    </tr>
-  </tbody>  
-</table>
 
 
-
-</div>
 
 <!-- STOPKA -->
-
-
 <footer class="stopka">    
         <div> 
             <p class="kontaktfr"> &copy; WesolyInformatyk.pl 2023  &nbsp; | &nbsp; </p>
