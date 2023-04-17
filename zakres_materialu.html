@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/zakres_materialu.css">
+    <title>Instalacja Windows Serwer</title>
+    <script src="https://kit.fontawesome.com/36e584741f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="sidenav">
+             <h1>Lekcje</h1>
+             <ul>
+                <li><a href="#section1"><i class="fa-brands fa-windows" style="color: #000000;"></i> Instalacja Windows Serwer 2016</a></li>
+                <li><a href="#section2"><i class="fa-brands fa-ubuntu" style="color: #000000;"></i> Instalacja Linux Ubuntu Serwer</a></li>
+                <li><a href="#section3"><i class="fa-brands fa-windows" style="color: #000000;"></i> Instalacja Usługi Active Directory na Windows Serwer 2016</a></li>
+                <li><a href="#section4"><i class="fa-brands fa-windows" style="color: #000000;"></i> Instalacja Usługi DHCP na Windows Serwer 2016</a></li>
+                <li><a href="#section5"><i class="fa-brands fa-linux" style="color: #000000;"></i> Instalacja Usługi DHCP na Linux Ubuntu Serwer</a></li>
+                
+             </ul>
+
+             <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-discord" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-github" style="color: #000000;"></i></a>
+             </div>
+        </div>
+
+        <div class="main-content">
+            <section id="section1">
+                <h1>Instalacja Windows Serwer</h1><br>
+                <div class="start">
+                <a>
+                    Systemy operacyjne Windows Server to rozwiązania firmy Microsoft, które znajdują zastosowanie zarówno jako serwery pracujące w sieciach lokalnych, 
+                    udostępniające takie usługi jak zarządzanie użytkownikami, udostępnianie zasobów plikowych, drukarek, DHCP, czy jako serwery zdalnego, bezpiecznego połączenia z siecią firmową poprzez VPN.
+                <a><br><br>
+                <a>
+                    Zastosowań serwerów Windowsowych jest oczywiście znacznie więcej. My na naszej stronie, przedstawimy funkcje sieciowe serwera, wymagane przez sieci lokalne.<br> Dowiesz jak się m.in. 
+                    konfigurować na serwerze usługi katalogowe (Active Directory), jak udostępniać zasoby plikowe i sprzętowe, jak skonfigurować i wdrażać serwery DHCP, usługę rutingu, serwery WWW czy FTP.<br><br>
+                </a>
+            </div>
+
+            <div class="wirtual">
+                <h1>WIRTUALIZAJCA</h1>
+                <p>Wirtualizacja jest pojęciem, które w informatyce występuje już spory kawał czasu. Nie wchodząc w szczegóły, polega ona na tworzeniu wirtualnych maszyn, komputerów, 
+                    za pomocą specjalistycznego oprogramowania.<br>
+                    Darmowych programów do wirtualizacji, które można polecić niestety nie ma zbyt wiele. 
+                    Mamy tak naprawdę jedno, sensowne rozwiązanie, którym jest program VirtualBox od firmy Oracle. 
+                    Program pobrać można z <a href="https://www.virtualbox.org/wiki/Downloads" class="linkwirtual"><u><b>oficjalnej strony</b></u></a>
+                    Dostępny jest na Windowsy, Linuxy, a także na MacOS.</p>
+            </div>
+            <div class="instal_win">
+                <h2>Szybki poradnik instalacji Windows Serwer 2016</h2><br>
+                <ul>
+                    <li>
+                        1. Wybierz system operacyjny swojego komputera.<br><br>
+                    </li>
+                    <li>
+                        <img src="photo/poradnik/poradnik1.png" class="zdjecie">
+                    </li>
+                    <li>
+                        2. Pobierz ISO Windows Serwer 2016.<br>
+                        <p>Możesz to zrobić klikając<a href="https://winiso.pl/windows-serwer/windows-server-2016" class="linkiso"> <u><b>tutaj</b></u></a></p><br><br>
+                    </li>
+                    <li>
+                        <img src="photo/poradnik/poradnik2.png" class="zdjecie">
+                    </li>
+                    <li>
+                        3. Tworzymy nową maszynę wirtualną na naszym VirtualBoxie.<br>
+                        Klikamy "Nowa". <br><br>
+                        <img src="photo/poradnik/poradnik3.png" class="zdjecie">
+                    </li>
+                    <li>
+                        4. Wypisujemy nazwę naszej maszyny <br>Wybieramy folder w którym będą przechowywane pliki naszych maszyn<br> Wybieramy pobrany przed chwilą obraz ISO naszego Windows Serwera<br><br>
+                        <img src="photo/poradnik/poradnik4.png" class="zdjecie">
+                    </li>
+                    <li>
+                        5. Nadajemy nazwę użytkownika i hasło do naszej maszyny wirtualnej.<br><br>
+                        <img src="photo/poradnik/poradnik5.png" class="zdjecie">
+                    </li>
+                    <li>
+                        6. Wybieramy ilość RAM-u i procesorów jakie chcemy "dać" naszej maszynie do spożytkowania.<br><br>
+                        <img src="photo/poradnik/poradnik6.png" class="zdjecie">
+                    </li>
+                    <li>
+                        7. Tworzymy wirtualny dysk twardy i przydzielamy mu odpowiednią wielkość.<br><br>
+                        <img src="photo/poradnik/poradnik7.png" class="zdjecie">
+                    </li>
+                    <li>
+                        8. Gratulacje! Stworzyłeś wirtualną maszynę z Windows Serwer! 👏<br><br>
+                        <img src="photo/poradnik/poradnik8.png" class="zdjecie">
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+
+
+
+            </section>
+            <section id="section2">
+                <h1>Instalacja Ubuntu Serwer</h1><br>
+                <div class="start">
+                    <a>
+                        Dystrybucja Ubuntu w dużej mierze oparta jest na jednej z najpopularniejszych dystrybucji Linux-a w historii, a mianowicie na Debianie. 
+                        W chwili obecnej pieczę nad jej rozwojem sprawuje firma Canonical i to ona jest odpowiedzialna za właściwe działanie systemu.
+                    </a><br><br>
+                    <a>
+                        Linux Ubuntu Serwer Edition to darmowa dystrybucja GNU/Linuksa. Dedykowana jest do zastosowań serwerowych. 
+                        Po zainstalowaniu może zawierać pakiety email, WWW, DNS a także baz danych. Sama instalacja jest prosta, a konfiguracja nie wymaga specjalnych zastosowań. 
+                        Celem Serwera www jest zapewnienie usługi http i zsynchronizowanie jej z aktualnymi standardami.
+                    </a>
+                </div>
+                <div class="instal_ubuntu">
+                    <h2>Szybki poradnik instalacji Ubuntu Server</h2><br>
+                    <ul>
+                        <li>
+                            1. Instalację zaczynamy na oficjalnej stronie Ubuntu<br>
+                            <p>Możesz do niej przejść klikając <a href="https://ubuntu.com/download/server" class="ubuntuiso"> <u><b>tutaj</b></u></a></p>
+                        </li>
+
+                        <li>
+                            2. Pobieramy nasz Ubuntu Serwer <br><br>
+                            <img src="photo/poradnik/poradnik9.png" class="zdjecie">
+                        </li>
+                        <li>
+                            3. Postępujemy tak samo jak w przypadku Windows Serwer 2016 <br>
+                            Klikamy "Nowa". <br>
+                            <img src="photo/poradnik/poradnik3.png" class="">
+                        </li>
+                        <li>
+                            4. Wypisujemy nazwę naszej maszyny <br>Wybieramy folder w którym będą przechowywane pliki naszych maszyn<br> Wybieramy pobrany przed chwilą obraz ISO naszego Ubuntu Serwera<br><br>
+                        <img src="photo/poradnik/poradnik10.png" class="zdjecie">
+                        </li>
+                        <li>
+                            5. Nadajemy nazwę użytkownika i hasło do naszej maszyny wirtualnej.<br><br>
+                            <img src="photo/poradnik/poradnik11.png" class="zdjecie">
+                        </li>
+                        <li>
+                            6. Wybieramy ilość RAM-u i procesorów jakie chcemy "dać" naszej maszynie do spożytkowania.<br><br>
+                            <img src="photo/poradnik/poradnik6.png" class="zdjecie">
+                        </li>
+                        <li>
+                            7. Tworzymy wirtualny dysk twardy i przydzielamy mu odpowiednią wielkość.<br><br>
+                            <img src="photo/poradnik/poradnik7.png" class="zdjecie">
+                        </li>
+                        <li>
+                            8. Gratulacje! Stworzyłeś wirtualną maszynę z Ubuntu Serwer! 👏<br><br>
+                            <img src="photo/poradnik/poradnik12.png" class="zdjecie">
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+
+
+            <section id="section3">
+                <h1>Instalacja Active Directory na Windows Serwer</h1><br>
+                <div class="start">
+                    <a>
+                        Active Directory jest usługą stworzoną przez Microsoft. 
+                        Najprościej rzecz ujmując Active Directory to nic innego jak zbiór informacji o użytkownikach, urządzeniach działających w sieci oraz przypisanych im uprawnieniach. 
+                        Dzięki tej usłudze z poziomu jednego miejsca możemy sprawować kontrolę nad komputerami, 
+                        drukarkami podłączonymi do serwera, tworzyć nowych użytkowników oraz przypisywać im specjalne uprawnienia np. dostępu do udziałów sieciowych (udostępnionych folderów).
+                    </a><br><br>
+                    <a>
+                        Naszą przygodę z  Windows Server 2016 rozpoczęliśmy od jego instalacji, a teraz zajmiemy się instalacją Active Directory zmieniając nasz czysty serwer w kontroler domeny. <br><br>
+                    </a>
+                </div>
+                <div class="ad_win">
+                    <ul>
+                        <li>
+                            1. Usługi instalujemy wywołując przystawkę Menedżer Servera, a następnie klikając Dodaj role i funkcje. <br>
+                            <img src="photo/poradnik/Active Directory/1.png" class="zdjecie">
+                        </li>
+                        <li>
+                            2. Powyższa czynność wywoła okno kreatora dodawania ról i funkcji w systemie Windows Server 2019. <br> Klikamy Dalej. <br>
+                            <img src="photo/poradnik/Active Directory/2.png" class="zdjecie">
+                        </li>
+                        <li>
+                            3. Zostawiamy domyślnie zaznaczoną opcję Instalacja oparta na rolach lub oparta na funkcjach i przechodzimy do następnego kroku. <br> Klikajmy Dalej. <br>
+                            <img src="photo/poradnik/Active Directory/3.png" class="zdjecie">
+                        </li>
+                        <li>
+                            4. Wybieramy serwer na którym zostanie zainstalowana usługa Active Directory i klikamy dalej. <br>
+                            <img src="photo/poradnik/Active Directory/4.png" class="zdjecie">
+                        </li>
+                        <li>
+                            5. Z listy dostępnych ról wybieramy Usługi domenowe Active Directory. <br>
+                            <img src="photo/poradnik/Active Directory/5.png" class="zdjecie">
+                        </li>
+                        <li>
+                            6. Powyższa czynność wywoła dodatkowe okno doinstalowania funkcji wspierających działanie Active Directory. <br> Klikamy Dodaj funkcje. <br>
+                            <img src="photo/poradnik/Active Directory/6.png" class="zdjecie">
+                        </li>
+                        <li>
+                            7. W tym miejscu warto zaznaczyć, że usługi domenowe Active Directory do prawidłowego działania potrzebują jeszcze jednej usługi – DNS którą (oczywiście jeśli nie została wcześniej dodana) zainstalować. 
+                             <br> W tym celu klikamy  w checbboxa Server DNS
+                             <img src="photo/poradnik/Active Directory/7.png" class="zdjecie">
+                        </li>
+                        <li>
+                            8. Też i w tym przypadku klikamy Dodaj funkcje. <br>
+                            <img src="photo/poradnik/Active Directory/8.png" class="zdjecie">
+                        </li>
+                        <li>
+                            9. Jeśli role Serwer DNS oraz Usługi Domenowe Active Directory zostały zaznaczone jak na poniższym obrazku, możemy przejść do następnego kroku klikając w przycisk Dalej. <br>
+                            <img src="photo/poradnik/Active Directory/9.png" class="zdjecie">
+                        </li>
+                        <li>
+                            10. W tym oknie nic nie zmieniamy. Klikamy Dalej przechodząc do następnego etapu Instalacji usługi domenowej Active Directory. <br>
+                            <img src="photo/poradnik/Active Directory/10.png" class="zdjecie">
+                        </li>
+                        <li>
+                            11. To okno jest bardzo ważne. <br> 
+                            Przed rozpoczęciem procesu instalacji przez serwer usług domenowych dowiemy się czym jest Active Directory oraz do czego służy. <br> 
+                            Po zapoznaniu się z treścią klikamy dalej. <br>
+                            <img src="photo/poradnik/Active Directory/11.png" class="zdjecie">
+                        </li>
+                        <li>
+                            12. To okno kreatora dodawania ról i funkcji do serwera działającego pod kontrolą systemu Windows Server 2019 również jest bardzo ważne. <br>
+                            Z tego okna dowiemy się czym Server DNS i do czego służy. <br>
+                            Po zapoznaniu się z treścią klikamy dalej. <br>
+                            <img src="photo/poradnik/Active Directory/12.png" class="zdjecie">
+                        </li>
+                        <li>
+                            13. Przed nami ostatnie okno potwierdzające instalację usług domenowych Active Directory w systemie Windows Server 2019. <br>
+                            Jeśli jesteś pewny swojego wyboru, klikamy zainstaluj. <br>
+                            <img src="photo/poradnik/Active Directory/13.png" class="zdjecie">
+                        </li>
+                        <li>
+                            14. Wykonanie powyższej czynności rozpocznie proces instalacji usług domenowych Active Directory w systemie Windows Server 2019. <br>
+                            <img src="photo/poradnik/Active Directory/14.png" class="zdjecie">
+                        </li>
+                        <li>
+                            15. Po kilkunastu minutach proces instalacji usług domenowych Active Directory w systemie Windows Server 2019 zostanie zakończony. <br>
+                            Zamykamy okno klikając w przycisk Zamknij.
+                            <img src="photo/poradnik/Active Directory/15.png" class="zdjecie">
+                        </li>
+                        <li>
+                            16. Świetnie. Teraz czas na najprzyjemniejszy proces – czyli konfigurację usługi Active Directory. <br>
+                            Uruchamiamy przystawkę Menedżer Servera i klikamy w żółty trójkąt znajdujący się w prawy górnym rogu. <br>
+                            Po rozwinięciu zakładki klikamy Podnieś poziomu tego serwera do poziomu kontrolera domeny. <br>
+                            <img src="photo/poradnik/Active Directory/16.png" class="zdjecie">
+                        </li>
+                        <li>
+                            17. W oknie konfiguracji zaznaczamy pole dodaj nowy las i definiujemy nazwę domeny głównej, w moim przypadku będzie do nazwa soisk.local <br>
+                            <img src="photo/poradnik/Active Directory/17.png" class="zdjecie">
+                        </li>
+                        <li>
+                            18. Poziom funkcjonalności lasu oraz domeny ustawiamy na Windows Server 2016. <br>
+                            Następnie definiujemy hasło trybu przywracania usług katalogowych i klikamy dalej.
+                            <img src="photo/poradnik/Active Directory/18.png" class="zdjecie">
+                        </li>
+                        <li>
+                            19. W kolejnym oknie klikamy dalej, nie przejmując się komunikatem o braku możliwości utworzenia delegowania dla tego servera DNS. <br>
+                            <img src="photo/poradnik/Active Directory/19.png" class="zdjecie">
+                        </li>
+                        <li>
+                            20. Kreator konfiguracji usług domenowych Active Directory automatycznie na podstawie wcześniej zdefiniowanej nazwy domeny przypisze nazwę NETBIOS. <br>
+                            Przechodzimy do następnego kroku klikając Dalej. <br>
+                            <img src="photo/poradnik/Active Directory/20.png" class="zdjecie">
+                        </li>
+                        <li>
+                            21. Określamy lokalizację bazy danych usług domenowych, pliku dziennika oraz sysvol. <br>
+                            Ja lokalizację pozostawiłem domyślną, ale warto wskazać inną partycję lub dysk. <br>
+                            <img src="photo/poradnik/Active Directory/21.png" class="zdjecie">
+                        </li>
+                        <li>
+                            22. Ostatnie okno konfiguracji. System sprawdzi czy wszystko jest w porządku. <br>
+                            Jeśli nie znajdzie żadnego błędu, klikamy Dalej. <br>
+                            <img src="photo/poradnik/Active Directory/22.png" class="zdjecie">
+                        </li>
+                        <li>
+                            23. Jeśli sprawdzenie wszystkich wymagań powiodło się, opcja zainstaluj powinna zostać aktywowana. <br>
+                            <img src="photo/poradnik/Active Directory/23.png" class="zdjecie">
+                        </li>
+                        <li>
+                            24. Kliknięcie w przycisk zainstaluj rozpocznie proces przygotowywania i konfigurowania serwera jako kontrole domeny. <br>
+                            <img src="photo/poradnik/Active Directory/24.png" class="zdjecie">
+                        </li>
+                        <li>
+                            25. Proces ten potrwa kilkanaście minut, o jego zakończeniu zostaniemy poinformowani stosownym komunikatem. <br>
+                            Klikamy w przycisk Zamknij. <br>
+                            <img src="photo/poradnik/Active Directory/25.png" class="zdjecie">
+                        </li>
+                        <li>
+                            26. Zakończenie instalacji i konfiguracji usługi domenowej Active Directory wymaga ponownego uruchomienia serwera. <br>
+                            Oczywiście jeśli jest to możliwe, uruchamiamy go ponownie. <br>
+                            <img src="photo/poradnik/Active Directory/26.png" class="zdjecie">
+                        </li>
+                        <li>
+                            27. Wywołujemy przystawkę systemu Windows 10 PRO <br>
+                            <img src="photo/poradnik/Active Directory/27.png" class="zdjecie">
+                        </li>
+                        <li>
+                            28. Następnie klikamy w opcje Zmień nazwę tego komputera. <br>
+                            <img src="photo/poradnik/Active Directory/28.png" class="zdjecie">
+                        </li>
+                        <li>
+                            29. Z dostępnych opcji wybieramy Zmień. <br>
+                            <img src="photo/poradnik/Active Directory/29.png" class="zdjecie">
+                        </li>
+                        <li>
+                            30. Wpisujemy adres domeny i klikamy OK <br>
+                            <img src="photo/poradnik/Active Directory/30.png" class="zdjecie">
+                        </li>
+                        <li>
+                            31. Jeśli wszystkie powyższe kroki zostały wykonane poprawnie, System Windows 10 PRO  znajdzie w sieci nasz serwer, co potwierdzi komunikatem zabezpieczenia Windows. <br>
+                            Podajemy tutaj login oraz hasło dostępowe do serwera. <br>
+                            <img src="photo/poradnik/Active Directory/31.png" class="zdjecie">
+                        </li>
+                        <li>
+                            32. Po kliknięciu w przycisk OK, naszym oczom powinien ukazać się poniższy komunikat. <br>
+                            <img src="photo/poradnik/Active Directory/32.png" class="zdjecie">
+                        </li>
+                        <li>
+                            33. Komputer działający w oparciu o system Windows 10 PRO został poprawnie dodany do domeny. <br>
+                            Teraz w celu zastosowania zmian, musimy ponownie uruchomić system. <br>
+                            Klikamy OK. <br>
+                            <img src="photo/poradnik/Active Directory/33.png" class="zdjecie">
+                        </li>
+                        <li>
+                            34. Zgodnie z podpowiedziami, uruchamiamy komputer ponownie. <br>
+                            <img src="photo/poradnik/Active Directory/34.png" class="zdjecie">
+                        </li>
+                        <li>
+                            35. Po podniesieni się systemu, możemy zalogować się do domeny. <br>
+                            <img src="photo/poradnik/Active Directory/35.png" class="zdjecie">
+                        </li>
+                        <li>
+                            GRATULACJE! W pełni zainstalowałeś i skonfigurowałeś usługę Active Directory na Windows Serwer 2016 👏 <br> 
+                            
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="section4">
+                <h1>Instalacja Usługi DHCP na Windows Serwer 2016</h1><br>
+                <div class="start">
+                    <a>
+                        Usługa DHCP (Dynamic Host Configuration Protocol) w systemie Windows Serwer 2016 odpowiedzialna 
+                        jest za przypisywanie prawidłowych adresów ip komputerom oraz innym urządzeniom podłączonym do naszej w sieci lokalnej. 
+                        Dzięki tej usłudze nie musimy ręcznie konfigurować ustawień karty sieciowej każdego klienta. 
+                        Serwer zrobi to za nas automatycznie. <br>
+                        Usługę DHCP będziemy instalować na serwerze, na którym wcześniej została zainstalowana i skonfigurowana usługa Active Directory oraz DNS.
+                        Usługi instalujemy wywołując przystawkę Menedżer Serwera, a następnie klikając Dodaj role i funkcje.
+                    </a>
+                </div>
+                <div class="dhcp_win">
+                    <ul>
+                        <li>
+                            <img src="photo/poradnik/DHCP_win/1.PNG"> <br>
+                            1. Powyższa czynność wywoła okno kreatora dodawania ról i funkcji w systemie Windows Serwer 2016. Klikamy Dalej.
+                        </li>
+                        <li>
+                            2. Zostawiamy domyślnie zaznaczoną opcję Instalacja oparta na rolach lub oparta na funkcjach i przechodzimy do następnego kroku klikając dalej.
+                            <img src="photo/poradnik/DHCP_win/2.PNG"> <br>
+                        </li>
+                        <li>
+                            3. Wybieramy serwer na którym zostanie zainstalowana usługa DHCP i klikamy dalej.
+                            <img src="photo/poradnik/DHCP_win/3.PNG"> <br>
+                        </li>
+                        <li>
+                            4. Z listy dostępnych ról wybieramy Serwer DHCP.
+                            <img src="photo/poradnik/DHCP_win/4.PNG"> <br>
+                        </li>
+                        <li>
+                           5. Instalujemy dodatkowe narzędzia klikając dodaj funkcje. <br>
+                            <img src="photo/poradnik/DHCP_win/5.PNG"> <br>
+                        </li>
+                        <li>
+                           6. Serwer DHCP został poprawnie zaznaczony. Przechodzimy do następnego kroku klikając dalej.
+                            <img src="photo/poradnik/DHCP_win/6.PNG"> <br>
+                        </li>
+                        <li>
+                            7. W tym oknie nic nie zmieniamy. Klikamy Dalej przechodząc do następnego etapu instalacji usługi DHCP.
+                            <img src="photo/poradnik/DHCP_win/7.PNG"> <br>
+                        </li>
+                        <li>
+                            8. To okno jest bardzo istotne. Przed rozpoczęciem procesu instalacji przez serwer wyżej wymienionej usługi, dowiemy się czym jest DHCP oraz do czego służy. Po zapoznaniu się z treścią klikamy dalej. <br>
+                            <img src="photo/poradnik/DHCP_win/8.PNG"> <br>
+                        </li>
+                        <li>
+                            9. Klikając przycisk dalej, potwierdzamy chęć instalacji usługi DHCP.
+                            <img src="photo/poradnik/DHCP_win/9.PNG"> <br>
+                        </li>
+                        <li>
+                            10. Wykonanie powyższej czynności rozpocznie proces instalacji usługi DHCP w systemie Windows Serwer 2016.
+                            <img src="photo/poradnik/DHCP_win/10.PNG"> <br>
+                        </li>
+                        <li>
+                            11. Po kilkunastu minutach proces instalacji usługi DHCP w systemie Windows Server 2016 zostanie zakończony. Zamykamy okno klikając w przycisk Zamknij.
+                            <img src="photo/poradnik/DHCP_win/11.PNG"> <br>
+                        </li>
+                        <li>
+                            12. Usługa DHCP w systemie Windows Serwer 2016 została pomyślnie zainstalowana. Świetnie. Teraz czas na najprzyjemniejszy proces – czyli konfigurację usługi DHCP. 
+                            Uruchamiamy przystawkę Menedżer Serwera i klikamy w żółty trójkąt znajdujący się w prawy górnym rogu. Po rozwinięciu zakładki klikamy Dokończ konfigurację funkcji DHCP. <br>
+                            <img src="photo/poradnik/DHCP_win/12.PNG"> <br>
+                        </li>
+                        <li>
+                            13. W celu ukończenia konfiguracji musimy utworzyć odpowiednie grupy zabezpieczeń oraz autoryzować serwer w domenie. Klikamy Dalej.
+                            <img src="photo/poradnik/DHCP_win/13.PNG"> <br>
+                        </li>
+                        <li>
+                            14. Określamy kto będzie mógł autoryzować (aktywować) usługę DHCP w Active Directory a następnie klikamy Potwierdź.
+                            <img src="photo/poradnik/DHCP_win/14.PNG"> <br>
+                        </li>
+                        <li>
+                            15. Tworzenie grup zabezpieczeń oraz autoryzacja serwera DHCP została zakończona. Klikamy Zamknij.
+                            <img src="photo/poradnik/DHCP_win/15.PNG"> <br>
+                        </li>
+                        <li>
+                            GRATULACJE! W pełni zainstalowałeś i skonfigurowałeś usługę DHCP na Windows Serwer 2016 👏 <br> 
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+
+            </section>
+            <section id="section5">
+                <h1>Instalacja Usługi DHCP na Linux Ubuntu Serwer</h1><br>
+                <div class="start">
+                    <a>
+                        DHCP to skrót od Dynamic Host Configuration Protocol – protokół dynamicznego konfigurowania hostów. 
+                        Jak nie trudno się domyśleć, jest to mechanizm pozwalający ”dynamicznie konfigurować hosty”. 
+                        Oznacza to, że w sieci w której działa serwer DHCP, inne urządzenia będą mogły od niego pobierać potrzebne ustawienia do działania w sieci. 
+                        Wśród tych ustawień są: adres IP, maska sieci, adres bramy domyślnej oraz adresy DNS. 
+                        Pytanie się nasuwa: Skąd klient wie, gdzie zgłosić swoje zapytanie skoro nie ma przypisanego adresu IP? 
+                        Odpowiedź brzmi: nie wie. Klient znajduje w sieci serwer DHCP wysyłając odpowiednią wiadomość na limitowany adres rozgłoszeniowy – 255.255.255.255. 
+                        Kiedy serwer zostanie odnaleziony, klient wysyła odpowiednie zapytania, na które serwer DHCP odpowiada odpowiednią konfiguracją.
+
+                        Adres IP przypisany przez DHCP jest dynamiczny. 
+                        Oznacza to, że po jakimś czasie następuje jego zwolnienie i pobranie nowego adresu. 
+                        W większości przypadków DHCP przypisze ten sam adres IP, jednak może się tak zdarzyć, iż DHCP przypisze inny adres. 
+                        Otóż adresy IP są dzierżawione na określoną ilość czasu. Po tym czasie wracają do puli wolnych adresów IP, a serwer przypisuje inne.
+
+                         DHCP jest na pewno wygodnym mechanizmem jednak tylko w przypadku klientów. 
+                        Wszelkiego rodzaju urządzenia sieciowe, serwery, drukarki i inny sprzęt tego typu musi być adresowany statycznie. 
+                        Dzieje się tak iż istnieje ryzyko, że takie urządzenie dostanie inne IP, a wtedy mogą się pojawić problemy z działaniem niektórych usług.
+                        Dodatkowo przed instalacją serwera DHCP warto zaktualizować repozytoria i pakiety znanymi komendami: <br>
+                        $ sudo apt update <br>
+                        $ sudo apt upgrade <br> <br>
+                    </a> 
+                   
+                       
+                </div>
+                <div class="dhcp_lin">
+                    <ul>
+                        <li>
+                            1. Instalacja implementacji ISC DHCP <br>
+                            Jako, że protokół DHCP to tylko przepis na gotowy produkt, to na rynku istnieje wiele rozwiązań, różnych producentów implementujących ten mechanizm. 
+                            Jedną z najpopularniejszych implementacji serwer DHCP jest ISC DHCP. 
+                            Została ona stworzona przez Internet Systems Consortium – organizację non-profit zajmującą się tworzeniem oprogramowania dla sieci komputerowych. 
+                            Pierwsza wersja ISC DHCP została opublikowana w 1999 roku i jest rozwijana po dziś dzień. Pokazuje to jak nie wiele wymaga dziedzina sieci komputerowych. <br> 
+                            <img src="photo/poradnik/DHCP_lin/1.png" class="zdjecie"> <br>
+                            Aby zainstalować ISC DHCP należy wydać polecenie: <br>
+                            $ sudo apt install isc-dhcp-server <br>
+                            Tak bowiem nazywa się pakiet z tą implementacją. Po poprawnej instalacji możemy przejść do konfiguracji. <br> <br>
+                        </li>
+                        <li>
+                            2. Konfiguracja ISC DHCP. <br>
+                            Konfiguracja serwera DHCP jest bajecznie prosta. 
+                            Wszystko opiera się o odpowiednie pliki konfiguracyjne, które muszą być odpowiednio edytowane, inaczej wszystko może się uszkodzić. 
+                            Na podstawie naszych plików konfiguracyjnych będą tworzone inne pliki i dowiązania. 
+                            W momencie kiedy coś pójdzie nie tak, to może być trudno naprawić powstałe problemy.
+                            Dlatego proszę zwracać uwagę na wszystko co robimy. <br>
+                            <img src="photo/poradnik/DHCP_lin/2.png" class="zdjecie"> <br>
+                            Najpierw musimy sprawdzić czy nasza usługa jest aktywna. Można to zrobić korzystając z polecenia systemctl wraz z parametrem status. <br>
+                            Nasza usługa nazywa się isc-dhcp-server.  <br> <br>
+                        </li>
+                        <li>
+                            Wpisujemy, więc: <br>
+                            $sudo systemctl status isc-dhcp-server <br>
+                            Interesuje nas przede wszystkim pole Active. 
+                            Bardzo ważne jest aby usługa NIE DZIAŁAŁA. Czyli failed jest tutaj poprawnym statusem. 
+                            Jeżeli usługa by nam się podniosła to sudo systemctl stop isc-dhcp-server skutecznie ją ubije. 
+                            Dodatkowymi błędami się obecnie nie przejmujemy. Informują nas, że usługa nie została skonfigurowana. 
+                            Wyjść z tego okienka możemy korzystając z Ctrl+C. <br>
+                            <img src="photo/poradnik/DHCP_lin/3.png" class="zdjecie"> <br>
+                            Generalnie, aby serwer DHCP zadziałał poprawnie, musimy dokonać zmian w dwóch plikach: <br>
+                            /etc/default/isc-dhcp-server <br>
+                            /etc/dhcp/dhcpd.conf <br>
+                            Aby otworzyć pierwszy z tych plików wpisujemy: <br>
+                            $ sudo nano /etc/default/isc-dhcp-server <br>
+                            Plik /etc/default/isc-dhcp-server przechowuje informacje na temat interfejsów na których usługa będzie nasłuchiwać żądań. 
+                            Poprawnie wygenerowany plik wygląda następująco (pomijając komentarze): <br>
+                            (…)
+                            INTERFACESv4="" 
+                            INTERFACESv6="" <br>
+                            <img src="photo/poradnik/DHCP_lin/4.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Jeżeli otworzony plik nie ma takiej struktury to należy takową utworzyć. 
+                            Nas interesuje pole INTERFACESv4 gdzie w cudzysłowie wpisujemy nazwę interfejsu LAN. 
+                            W naszym przypadku jest to enp0s8. Ostatecznie plik ma wyglądać tak jak na screenie. <br>
+                            <img src="photo/poradnik/DHCP_lin/5.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Istotniejszym z naszego punktu widzenia plikiem jest /etc/dhcp/dhcpd.conf. <br>
+                            Przechowuje on konfigurację naszego demona DHCP (inaczej usługi w nomenklaturze Windowsowej) i stanowi najważniejszy element całej konfiguracji. 
+                            Jego złe edytowanie może spowodować wiele problemów, dlatego należy podchodzić do niego ostrożnie. 
+                            Najlepiej wykonać sobie jego kopię. <br>
+                            Aby wykonać kopię pliku /etc/dhcp/dhcpd.conf należy wpisać polecenie: <br>
+                            $ sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf-kopia <br> <br>
+
+                            Potem możemy wyświetlić zawartość katalogu /etc/dhcp/ poleceniem: <br>
+                            $ ls -l /etc/dhcp <br>
+                            i widzimy, że kopia została wykonana. <br>
+                            <img src="photo/poradnik/DHCP_lin/6.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Edytujemy zatem nasz plik poleceniem: <br>
+                            $ sudo nano /etc/dhcp/dhcpd.conf <br> <br>
+                            Pierwszym interesującym nas elementem będzie wpis authoritative. 
+                            Domyślnie jest umieszczony w komentarzu, który można rozpoznać po znaku # na początku linii. 
+                            Wpis ten informuje nasz serwer DHCP iż jest jedynym serwerem tego typu w sieci. 
+                            Dzięki temu ISC DHCP będzie odmawiać klientom z innych podsieci przyznania adresu IP. 
+                            Kiedy ta opcja pozostałaby wyłączona to serwer DHCP po prostu ignorowałby żądania klienta. 
+                            Wpis ten istotny jest przy konfiguracji serwera DNS dlatego już na początku warto zdjąć z niego komentarz – kasując znak # <br>
+                            <img src="photo/poradnik/DHCP_lin/7.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Następnie odnajdujemy sekcję w której komentarz mówi "A slightly different configuration for an internal subnet". 
+                            Jest to przykładowa konfiguracja serwera DHCP, która wystarczy nam do ćwiczeń. 
+                            Na początku musimy odkomentować wszystkie komentarze od subnet do znaku }, tak jak jest pokazane na powyższym screenie. 
+                            Jest to bardzo istotne ponieważ w przypadku złego odkomentowania, usługa może już nie wstać. 
+                            Oczywiście musimy dostosować konfigurację do naszej sieci. <br>
+                            Parametry naszej sieci: <br>
+                            - Adres sieci: 192.168.10.0 <br>
+                            - Maska sieci: 255.255.255.0 - /24 <br>
+                            - Adres (przyszłej) bramy: 192.168.10.10 <br>
+                            - Adres (przyszłego) serwera DNS: 192.168.10.10 <br>
+                            - Adres serwera: 192.168.10.10 <br>
+                            - Adres rozgłoszeniowy: 192.168.10.255 <br>
+                            Oczywiście parametry te zależą od adresacji i u każdego mogą być zupełnie inne, dlatego też proszę nie przepisywać bezmyślnie tych danych z tego dokumentu.
+                        </li>
+                        <li> <br>
+                            Tym samym kończymy też omawianie tegoż pliku konfiguracyjnego. 
+                            Kiedy wszystko zostanie już skonfigurowane to należy pamiętać o zapisaniu zmian w pliku. 
+                            <img src="photo/poradnik/DHCP_lin/8.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Po zapisaniu pliku pozostało nam już tylko uruchomić lub zrestartować serwer DHCP. Wykorzystamy do tego znaną już komendę, jednak z innymi parametrami: <br>
+                            $ sudo systemctl start isc-dhcp-server <br> lub <br>
+                            $ sudo systemctl restart isc-dhcp-server <br>
+                            <img src="photo/poradnik/DHCP_lin/9.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Następnie możemy sprawdzić czy poprawnie usługa została uruchomiona wykorzystując komendę systemctl z parametrem status: <br>
+                            $ sudo systemctl status isc-dhcp-server <br>
+                            Pole Active musi wskazywać active (running) zaś jedyny błąd jaki może się pojawić to błąd o braku deklaracji zakresu dla karty enp0s3. Błąd ten zniknie po instalacji serwera routingu, więc nie należy się nim przejmować. Jeżeli pojawia się inny błąd to może oznaczać to złą konfigurację serwera DHCP.
+                        </li>
+                        <li> <br>
+                            3. Konfiguracja klienta korzystając z serwera DHCP. <br>
+                            Kolejną rzeczą jaką należy zrobić, jest konfiguracja klienta lub tak jak w naszym przypadku klientów tak aby korzystali z serwera DHCP. 
+                            Podłączymy do naszego serwera dwóch klientów, jeden z systemem Ubuntu Desktop 20.04, a drugi z Windows 8.1. <br>
+                            <img src="photo/poradnik/DHCP_lin/10.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            W Ubuntu możemy to zrobić w ustawieniach sieci tak jak wcześniej ustawialiśmy stałe IP. 
+                            Tam wybieramy Przewodowe, wchodzimy w Opcje i w zakładce IPv4 ustawiamy Automatycznie. 
+                            Zapisujemy zmiany i warto przeładować sobie interfejs korzystając z odpowiedniego do tego przycisku (przełącznik na głównym ekranie, ten fioletowy).
+                            <img src="photo/poradnik/DHCP_lin/11.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Następnie klikamy ponownie w Ustawienia i w zakładce Informacje sprawdzamy co pobrała nasza karta. <br>
+                            Jak widzimy karta sieciowa pobrała pierwszy dostępny adres, czyli 192.168.10.200. <br>
+                            <img src="photo/poradnik/DHCP_lin/12.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Możemy też uruchomić terminal i tam przy użyciu polecenia ip a także sprawdzić czy pobrany adres jest właściwy. <br>
+                            Dodatkowo możemy zapingować na serwer i jak widać odpowiedź wraca. <br>
+                            <img src="photo/poradnik/DHCP_lin/13.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Podobną czynność wykonamy na kliencie z systemem Windows. <br>
+                            Ustawiamy kartę sieciową na automatyczny pobór adresacji i po uruchomieniu wiersza poleceń wpisujemy polecenie ipconfig /all. <br>
+                            Tym razem widzimy adres 192.168.10.201, czyli następny wolny. <br>
+                            <img src="photo/poradnik/DHCP_lin/14.png" class="zdjecie"> <br>
+                            Bardzo ciekawym poleceniem dostarczanym przez ISC DHCP jest: <br>
+                            $ sudo dhcp-lease-list
+                        </li>
+                        <li>
+                            Wyświetla nam ono wszystkie obecnie trwające dzierżawy adresów IP. 
+                            Można tutaj sprawdzić chociażby adres MAC czy IP komputerów, ale jedynie tych które korzystają z usług DHCP. 
+                            Widać tutaj również datę wygaśnięcia dzierżawy, a także po wgraniu odpowiedniego pliku – producenta.
+                            <img src="photo/poradnik/DHCP_lin/15.png" class="zdjecie"> <br>
+                            Na koniec sprawdzimy połączenie z serwera do naszych klientów. Jak widać działa, połączenie pomiędzy klientami, a serwerem zostało poprawnie nawiązane.
+                        </li>
+                        <li>
+                            4. Rezerwacja adresów dla klienta. <br>
+                            Ostatnią rzeczą jaką pozostaje nam jeszcze zrobić, jest rezerwacja konkretnego adresu IP dla klienta. 
+                            Wystarczy skojarzyć konkretny adres IP z adresem fizycznym klienta.
+                            <img src="photo/poradnik/DHCP_lin/16.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Edytujemy ponownie plik "/etc/dhcp/dhcpd.conf" poleceniem: <br>
+                            $ sudo nano /etc/dhcp/dhcpd.conf <br>
+                            i odszukujemy pozycję #host fantasia { <br>
+                            <img src="photo/poradnik/DHCP_lin/17.png" class="zdjecie"> <br>
+                        </li>
+                        <li>
+                            Oczywiście należy zdjąć komentarze zaczynając od host..., a kończąc na } i podać nazwę naszego hosta, 
+                            jego adres MAC oraz adres IP, który chcemy dla niego zarezerwować. <br>
+                            U nas będzie to 192.168.10.25. Zapisujemy zmiany w pliku i restartujemy serwer DHCP. <br>
+                            <img src="photo/poradnik/DHCP_lin/18.png" class="zdjecie"> <br>
+                            Na koniec pozostaje nam w ustawieniach sieci na kliencie, znanym już "suwakiem" wyłączyć i 
+                            włączyć "Ustawienia sieci przewodowej" oraz sprawdzić jaki adres IP pobrał klient. <br>
+                            Jak widać jest to 192.168.10.25, czyli taki jaki został dla niego zarezerwowany.
+                        </li>
+                        <li>
+                            GRATULACJE! W pełni zainstalowałeś i skonfigurowałeś DHCP na Linux Ubuntu Serwer 👏 <br> 
+                        </li>
+                    </ul>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+</body>
+</html>
