@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.tytul-main{
+    text-align: center;
+    font-size: 55px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* sekcja 1 */
+
+.info1-panel-index {
+  width:100%;
+  height: 600px;
+  background-color: #fff568;
+}
+.lewy-panel-info1 {
+  width: 70%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float: right;
+}
+
+.tytul-info1-panel-index {
+  font-size: 75px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+.tekst-info1-panel-index {
+  font-size: 37px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+  
+.prawy-panel-info1 {
+  width: 30%;
+  height: 95%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.photo{
+    box-shadow: 0px 0px 19px 0px #000000;
+}
+
+.srodek-info1-panel-index {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff 
+    ;
+  }
+
+/* sekcja 2 */
+
+.info2-panel-index {
+    width: 100%;
+    height: 600px;
+    background-color: #fff568;
+  }
+  .lewy-panel-info2 {
+    width: 70%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+  }
+  
+  .tytul-info2-panel-index {
+    font-size: 75px;
+    font-weight: 600;
+    margin-bottom: 45px;
+  }
+  
+  .tekst-info2-panel-index {
+    font-size: 37px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+    
+  .prawy-panel-info2 {
+    width: 30%;
+    height: 95%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .photo{
+      box-shadow: 0px 0px 19px 0px #000000;
+  }
+  
+  .srodek-info2-panel-index {
+      width: 100%;
+      height: 200px;
+      background-color: #ffffff 
+      ;
+    }
+/* sekcja 3 */
+
+.panel-sekcja-3 {
+  width:100%;
+  height: 600px;
+  background-color: #ffffff;
+}
+
+.panel-3-egzamin{
+  width: 750px;
+  height: 750px;
+  background-image: url(../photo/box-25525.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float: right;
+  margin-right: 100px;
+}
+
+.panel-3-kalkulator{
+  width: 750px;
+  height: 750px;
+  background-image: url(../photo/box-25525.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float: left;
+  margin-left: 100px;
+}
+
+.kalkulator-napis{
+  font-size: 75px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.srodek-3-panel {
+  width: 100%;
+  height: 300px;
+  background-color: #ffffff ;
+}
+
+/* sekcja 4 */
+
+.tytul-main-4{
+    font-size: 220%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .panel-authors-main {
+        width: 100%;
+        height: 600px;
+        background-color: #ffffff;
+      }
+      .author-left {
+        width: 32%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        float: left;
+        margin-top: 70px;
+        margin-left: 35px;
+      }
+      
+      .author-center {
+        width: 32%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        float: left;
+        margin-top: 70px;
+      }
+      .author-right {
+        width: 32%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        float: left;
+        margin-top: 70px;
+      }
+
+   .title-author {
+    font-size: 26px;
+    font-weight: 640;
+    margin-top: 20px;
+  }
+
+  .srodek-4-panel {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff 
+    ;
+  }
