@@ -49,30 +49,22 @@
 
                     Podaj maskę: <input class="css-input" name="maska" type='number' min="8" max="32"><br /><br />
                     <div class="przyciski">
-                        <br><button class="myButton"> Adres sieciowy </button>
-                        <button type="submit" class="myButton-2"> Adres rozgłoszeniowy </button>
-                        <button type="submit" class="myButton"> Ilość hostów </button><br><br>
-                        <button type="submit" class="myButton"> Ilość podsieci </button>
-                        <button type="submit" class="myButton"> Host min/max </button>
-                        <button type="submit" class="myButton"> Klasa sieci </button><br><br>
+                        <br><button class="myButton"> Adres sieciowy </button> <button type="submit" class="myButton-2"> Adres rozgłoszeniowy </button> <button type="submit" class="myButton"> Ilość hostów </button><br>
+                        <button type="submit" class="myButton"> Ilość podsieci </button> <button type="submit" class="myButton"> Host min/max </button> <button type="submit" class="myButton"> Klasa sieci </button><br>
                         <button type="submit" class="myButton-wszystko" id= "myButton-wszystko" onclick="myFunction()"> OBLICZ WSZYSTKO </button>
 
                     </div>
                 </form>
 
-<script>
-    document.getElementByID("wynik-wszystko").onClick = function() {myFunction()};
-
-    function myFunction(){
-        document.getElementById("table").classList.toggle("show");
-    }
-</script>
-
             </div>
     </div>
     </main>
 
-
+<script>
+    function myFunction(){
+        document.getElementById("niewidoczne-adres-sieci").style.color = "black";
+    }
+</script>
 <?php
 
 
@@ -325,7 +317,7 @@
   <tbody>
     <tr>
       <td>Adres Sieci</td>
-      <td class="srodek"><?php print_r($adres_sieci_binarnie) ?></td>
+      <td class="srodek "><?php print_r($adres_sieci_binarnie) ?></td>
       <td class="srodek"><?php print_r($adres_sieci_dziesietnie) ?></td>
     </tr>
     <tr>
