@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap%27');
+
+.tresc-main{
+  font-family:Poppins;
+  text-align: center;
+  font-size: 55px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+	color:#000000;
+	font-family:Arial;
+	font-weight:bold;
+  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color: whitesmoke;
+}
+#gdzies{
+  margin-left: 120px;
+}
+.formularz{
+  width:100%;
+  height: 800px;
+  background-color: #fff568;
+  text-align: center;
+  font-family:Arial;
+}
+.tabelka{
+  width:100%;
+  height: 800px;
+  background-color: #fff568;
+  text-align: center;
+  font-family:Arial;
+}
+.wszystko{
+  width:100%;
+  height: 800px;
+  background-color: #fff568;
+  text-align: center;
+  font-family:Arial;
+}
+.wyniki{
+  width:98%;
+  height: 700px;
+  background-color: #fff568;
+  text-align: center;
+  font-family:Arial;
+}
+
+.css-input {
+  padding: 0px;
+  font-size: 18px;
+  border-width: 2px;
+  border-color: #fff265;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: inset;
+  text-align: center;
+  border-radius: 36px;
+  box-shadow: 1px 5px 11px rgba(66,66,66,.44);
+  font-size: 20px;
+  font-family:Arial;
+  size: 2px
+}
+.css-input:focus {
+  outline:none;
+}
+
+
+.formularz-input{
+
+  font-size: 20px;
+
+}
+ 
+.przyciski{
+  width: 100%;
+  height: 100px;
+}
+.myButton {
+  display:inline-block;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 240px;
+  height: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0);
+  background-color: #252525;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.myButton-2 {
+  display:inline-block;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 10px;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0);
+  background-color: #252525;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.myButton-wszystko {
+  display:inline-block;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 775px;
+  height: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0);
+  background-color: #252525;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.myButton-2:hover {
+	opacity: 1;
+  transform: scale(1.05);
+}
+.myButton-2:active {
+	position:relative;
+	top:1px;
+}
+.myButton-wszystko:hover {
+	opacity: 1;
+  transform: scale(1.05);
+}
+.myButton-wszystko:active {
+	position:relative;
+	top:1px;
+}
+.myButton:hover {
+	opacity: 1;
+  transform: scale(1.05);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.sekcja{
+  width:100%;
+  height: 500px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#table1{
+  display: none;
+}
+.my-table {
+  width: 80%;
+  margin-left: 80px;
+  border-width: 0px;
+  border-style: none;
+  border-color: #222222;
+  border-collapse: collapse;
+  background-color: #FFF568;
+  color: #222222;
+
+}
+.my-table th.mniejszy{
+  font-size: 20px;
+  text-align: center;
+}
+.show {display:block;}
+
+.my-table td.srodek{
+  text-align: center;
+  width: 100%;
+}
+.my-table th, .my-table td {
+  border-width: 12px;
+  border-style: none;
+  border-color: #222222;
+  font-family:Poppins;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+	color:#000000;
+	font-family:Arial;
+	font-weight:bold;
+  padding: 12px;
+}
+
+.my-table thead {
+  background-color: #FFF568;
+  color: #222222;
+  margin: 12px;
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.rorr_zapobieganie{
+  color: red;
+}
