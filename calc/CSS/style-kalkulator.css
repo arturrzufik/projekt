@@ -12,6 +12,44 @@
   
 }
 
+.tresc-main1{
+  font-family:Poppins;
+  text-align: center;
+  font-size: 55px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+	color:#000000;
+	font-weight:bold;
+  
+}
+
+.poradnik{
+  color:#000000;
+	font-family:Arial;
+  align-content: center;
+  text-align: center;
+}
+.poradnik1{
+  color:#000000;
+	font-family:Arial;
+  align-content: center;
+  margin-left: 42%;
+  text-align: center;
+}
+.pora{
+  color:#000000;
+	font-family:Arial;
+	font-weight:bold;
+}
+.pora:active {
+	position:relative;
+	top:1px;
+}
+.pora:hover{
+	opacity: 1;
+  transform: scale(1.05);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
@@ -23,6 +61,13 @@ body {
 .formularz{
   width:100%;
   height: 800px;
+  background-color: #fff568;
+  text-align: center;
+  font-family:Arial;
+}
+.formularz1{
+  width:100%;
+  height: 900px;
   background-color: #fff568;
   text-align: center;
   font-family:Arial;
@@ -88,8 +133,9 @@ body {
   font-size: 18px;
   border-radius: 10px;
   width: 240px;
-  height: 60px;
+  height: 40px;
   font-weight: bold;
+  border-top: 20px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
   box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0);
   background-color: #252525;
@@ -128,10 +174,11 @@ body {
   font-size: 18px;
   border-radius: 10px;
   width: 775px;
-  height: 60px;
+  height: 40px;
   font-weight: bold;
   transition: 0.3s;
   box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0);
+  border-top: 20px solid rgba(255, 255, 255, 0);
   background-color: #252525;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -171,7 +218,7 @@ body {
   text-align: center;
 }
 
-#table1{
+#table1, #table2, #table3,#table4 ,#table5 , #table6{
   display: none;
 }
 .my-table {
@@ -194,6 +241,9 @@ body {
 .my-table td.srodek{
   text-align: center;
   width: 100%;
+}
+.srodek{
+  text-align: center;
 }
 .my-table th, .my-table td {
   border-width: 12px;

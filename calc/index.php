@@ -40,6 +40,14 @@
     </header>
 
     <main>
+
+    <?php
+
+        ini_set('display_errors', 0);
+        ini_set('display_startup_errors', 0);
+        error_reporting(E_ALL);
+
+    ?>
     <div class="tresc-main">
                 <h1 class="tytul-main">KALKULATOR IP</h1>
                 </div>
@@ -48,43 +56,42 @@
                 <form action="./" method="post">
                     <br><br><br>
                     
-                    Podaj adres IP (IPv4) : <input class="css-input" name="ip1" type='number' min="0" max="255" size="2"> . <input class="css-input" name="ip2" type='number' min="0" max="255" size="2"> . <input class="css-input" name="ip3" type='number' min="0" max="255" size="2"> . <input class="css-input" name="test" type='number' min="0" max="255" size="2"><br /><br />
-                    Podaj maskę: <input class="css-input" name="maska" type='number' min="8" max="32"> <button class="myButton-2 css-input" type="submit" id="btn-as"> Prześlij dane </button><br /><br />
+                    Podaj adres IP (IPv4) : <input class="css-input" name="ip1" type='number' min="0" max="255" size="2" placeholder="<?php echo($_POST["ip1"]); ?>"> . <input class="css-input" name="ip2" type='number' min="0" max="255" size="2" placeholder="<?php echo($_POST["ip2"]); ?>"> . <input class="css-input" name="ip3" type='number' min="0" max="255" size="2" placeholder="<?php echo($_POST["ip3"]); ?>"> . <input class="css-input" name="test" type='number' min="0" max="255" size="2" placeholder="<?php echo($_POST["test"]); ?>"><br /><br />
+                    Podaj maskę: <input class="css-input" name="maska" type='number' min="8" max="32" placeholder="<?php echo($_POST["maska"]); ?>"> <button class="myButton-2 css-input" type="submit" id="btn-as"> Prześlij dane </button><br /><br />
                     <div class="przyciski">
-                        <button class="myButton" type="button" id="btn-as" onclick= 'pokaTablice1()'> Adres sieciowy </button>
-                         <button type="button" class="myButton" onclick= 'pokaTablice2()'> Adres Rozgłoszeniowy</button> 
-                          <button type="button" class="myButton"> Ilość hostów </button></br>
-                        <button type="button" class="myButton"> Ilość podsieci </button>
-                         <button type="button" class="myButton"> Host min/max </button>
-                          <button type="button" class="myButton"> Klasa sieci </button></br>
-                        <button type="button" class="myButton-wszystko" id= "myButton-wszystko" onclick="myFunction()"> OBLICZ WSZYSTKO </button>
+                        <a href="#tresc" class="myButton" type="button" id="btn-as" onclick= 'pokaTablice1()'> Adres sieciowy </a>
+                         <a href="#tresc" type="button" class="myButton" onclick= 'pokaTablice2()'> Adres Rozgłoszeniowy</a> 
+                          <a href="#tresc" type="button" class="myButton" onclick= 'pokaTablice3()'> Maska </a></br>
+                        <a href="#tresc" type="button" class="myButton" onclick= 'pokaTablice4()'> Hostów w sieci </a>
+                         <a href="#tresc" type="button" class="myButton" onclick= 'pokaTablice6()'> Host min/max </a>
+                          <a href="#tresc" type="button" class="myButton" onclick= 'pokaTablice5()'> Klasa sieci </a></br>
+                        <a href="#tresc" type="button" class="myButton-wszystko" id= "myButton-wszystko" onclick="pokaTablice7()"> OBLICZ WSZYSTKO </a>
 
                     </div>
                 </form>
                 
+                
             </div>
+            <br><br><br><br><br><br><br><br><br>
+            <p class="poradnik1" style="text-align:left"> JAK DZIAŁA KALKULATOR? <br><br><br> 1. Wpisz adres IP oraz maskę. <br><br> 2. Kliknij przycisk "Prześlij dane". <br><br> 3. Wybierz co chcesz obliczyć. </p>
+         
     </div>
-
 
     </main>
   <!-- USUWANIE BŁĘDów PHP -->
-  <?php
 
-ini_set('display_errors', 0);
-ini_set('display_startup_errors', 0);
-error_reporting(E_ALL);
-
-?>
 
 
 <!-- WYNIKI -->
 
-<div class="tresc-main">
+<div class="tresc-main1" id="tresc">
                 <h1 class="tytul-main">WYNIKI</h1>
                 </div>
-<div class="formularz" id="formularz">
+<div class="formularz1" id="formularz1">
 
 <?php
+
+$liczba = "10";
 #Broadcast
 
         //zapobiegamy wyskakiwaniu błędów przed wprowadzeniem danych
@@ -101,8 +108,7 @@ error_reporting(E_ALL);
             if(!is_null($errors)) echo $errors;
             else{
 
-
-
+            $test = $_POST["ip1"];
                 //pobieramy ip z formularza
             $adresIP1 = $_POST["ip1"] . ".";
             $adresIP2 = $_POST["ip2"] . ".";
@@ -324,16 +330,75 @@ error_reporting(E_ALL);
 <script>
     function pokaTablice1(){
         document.getElementById("table1").style.display = "block";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "none";
+
     }
     function pokaTablice2(){
+        document.getElementById("table1").style.display = "none";
         document.getElementById("table2").style.display = "block";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "none";
+    }
+    function pokaTablice3(){
+        document.getElementById("table1").style.display = "none";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "block";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "none";
+    }
+    function pokaTablice4(){
+        document.getElementById("table1").style.display = "none";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "block";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "none";
+    }
+    function pokaTablice5(){
+        document.getElementById("table1").style.display = "none";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "block";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "none";
+    }
+    function pokaTablice6(){
+        document.getElementById("table1").style.display = "none";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "block";
+        document.getElementById("table7").style.display = "none";
+    }
+    function pokaTablice7(){
+        document.getElementById("table1").style.display = "none";
+        document.getElementById("table2").style.display = "none";
+        document.getElementById("table3").style.display = "none";
+        document.getElementById("table4").style.display = "none";
+        document.getElementById("table5").style.display = "none";
+        document.getElementById("table6").style.display = "none";
+        document.getElementById("table7").style.display = "block";
     }
 </script>
-<table class="my-table" id="table1">
+<div id="table1">
+<table class="my-table" >
     <br>
   <thead>
     <tr>
-      <th>       </th>
+      <th>                                </th>
       <th class = "mniejszy">binarnie</th>
       <th class = "mniejszy">dziesiętnie</th>
     </tr>
@@ -342,19 +407,101 @@ error_reporting(E_ALL);
 
     
     <tr>
-      <td id= 'adresSieci3'>Adres Sieci </td>
+      <td id= 'adresSieci3'>Adres Sieci&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
       <td class="srodek" id= 'adresSieci1'> <?php print_r($adres_sieci_binarnie); ?></td>
       <td class="srodek" id= 'adresSieci2'><?php print_r($adres_sieci_dziesietnie) ?></td>
     </tr>
 
     </tbody>  
 </table>
+    <br><br>
+    <p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
 
-<table class="my-table" id="table2">
-    <br>
+<div id="table2">
+<table class="my-table">
+  <tbody>
   <thead>
     <tr>
-      <th>       </th>
+      <th>                                </th>
+      <th class = "mniejszy">binarnie</th>
+      <th class = "mniejszy">dziesiętnie</th>
+    </tr>
+  </thead>
+    
+    <tr>
+      <td id= 'ar1' >Adres Rozgłoszeniowy</td>
+      <td class="srodek" id= 'ar2'>  <?php print_r($adres_rozgloszeniowy_binarnie) ?></td>
+      <td class="srodek" id= 'ar3'>  <?php print_r($adres_rozgloszeniowy_dziesietnie) ?></td>
+    </tr>
+
+    </tbody>  
+</table>
+<br><br>
+    <p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
+
+<div id="table3">
+<table class="my-table" >
+  <tbody>
+  <thead>
+    <tr>
+      <th>                                </th>
+      <th class = "mniejszy">binarnie</th>
+      <th class = "mniejszy">dziesiętnie</th>
+    </tr>
+  </thead>
+    
+    <tr>
+      <td id= 'm1' >Maska</td>
+      <td class="srodek" id= 'm2'><?php print_r($maska_binarnie_podzielona) ?></td>
+      <td class="srodek" id= 'm3'><?php print_r($maska_dziesietnie) ?></td>
+    </tr>
+
+    </tbody>  
+</table>
+<br><br>
+<p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
+
+<div id="table4">
+<table class="my-table">
+  <tbody>
+
+    
+    <tr>
+        <td id= 'h1'> Hostów w sieci </td>
+        <td class="srodek" id= 'h2'><?php print_r($hostow_w_sieci) ?></td>
+    </tr>
+
+    </tbody>  
+</table>
+<br><br>
+<p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
+
+<div id="table5">
+<table class="my-table" >
+
+  <tbody>
+
+    
+    <tr>
+        <td id= 'k1'> Klasa sieci </td>
+        <td class="srodek" id= 'k2'><?php print_r($klasa_sieci) ?></td>
+    </tr>
+
+    </tbody>  
+</table>
+<br><br>
+<p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
+
+<div id="table6">
+<table class="my-table">
+  <thead>
+    <tr>
+      <th>                                </th>
       <th class = "mniejszy">binarnie</th>
       <th class = "mniejszy">dziesiętnie</th>
     </tr>
@@ -362,32 +509,6 @@ error_reporting(E_ALL);
   <tbody>
 
     
-    <tr>
-      <td id= 'ar1' >Adres Rozgłoszeniowy </td>
-      <td class="srodek" id= 'ar2'><?php print_r($adres_rozgloszeniowy_binarnie) ?></td>
-      <td class="srodek" id= 'ar3'><?php print_r($adres_rozgloszeniowy_dziesietnie) ?></td>
-    </tr>
-
-    </tbody>  
-</table>
-
-    <!-- <tr>
-      
-    </tr>
-    <tr>
-      <td id= 'm1' >Maska</td>
-      <td class="srodek" id= 'm2'><?php print_r($maska_binarnie_podzielona) ?></td>
-      <td class="srodek" id= 'm3'><?php print_r($maska_dziesietnie) ?></td>
-    </tr>
-    
-    <tr>
-        <td id= 'h1'> Hostów w sieci </td>
-        <td class="srodek" id= 'h2'><?php print_r($hostow_w_sieci) ?></td>
-    </tr>
-    <tr>
-        <td id= 'k1'> Klasa sieci </td>
-        <td class="srodek" id= 'k2'><?php print_r($klasa_sieci) ?></td>
-    </tr>
     <tr>
       <td id= 'Hmin1'>Host min</td>
       <td class="srodek" id= 'Hmin2'><?php print_r($host_minimum_binarnie) ?></td>
@@ -397,10 +518,65 @@ error_reporting(E_ALL);
       <td id= 'Hmax1'>Host max</td>
       <td class="srodek" id= 'Hmax2'><?php print_r($host_maksimum_binarnie) ?></td>
       <td class="srodek" id= 'Hmax3'><?php print_r($host_maksimum) ?></td>
-    </tr> -->
+    </tr>
+    </tbody>  
+</table>
+<br><br>
+<p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
 
+<div id= "table7" style="display:none">
+<table class="my-table">
+    <br>
+    <thead>
+        <tr>
+        <th>       </th>
+        <th class = "mniejszy">binarnie</th>
+        <th class = "mniejszy">dziesiętnie</th>
+        </tr>
+    </thead>
+    <tbody>
 
-
+        
+        <tr>
+        <td>Adres Sieci</td>
+        <td class="srodek" id= 'adresSieci1' > <?php print_r($adres_sieci_binarnie); ?></td>
+        <td class="srodek" id= 'adresSieci2' ><?php print_r($adres_sieci_dziesietnie) ?></td>
+        </tr>
+        <tr>
+        <td>Adres Rozgłoszeniowy</td>
+        <td class="srodek"><?php print_r($adres_rozgloszeniowy_binarnie) ?></td>
+        <td class="srodek"><?php print_r($adres_rozgloszeniowy_dziesietnie) ?></td>
+        </tr>
+        <tr>
+        <td>Maska</td>
+        <td class="srodek"><?php print_r($maska_binarnie_podzielona) ?></td>
+        <td class="srodek"><?php print_r($maska_dziesietnie) ?></td>
+        </tr>
+        
+        <tr>
+            <td> Hostów w sieci </td>
+            <td class="srodek"><?php print_r($hostow_w_sieci) ?></td>
+        </tr>
+        <tr>
+            <td> Klasa sieci </td>
+            <td class="srodek"><?php print_r($klasa_sieci) ?></td>
+        </tr>
+        <tr>
+        <td>Host min</td>
+        <td class="srodek"><?php print_r($host_minimum_binarnie) ?></td>
+        <td class="srodek"><?php print_r($host_minimum) ?></td>
+        </tr>
+        <tr>
+        <td>Host max</td>
+        <td class="srodek"><?php print_r($host_maksimum_binarnie) ?></td>
+        <td class="srodek"><?php print_r($host_maksimum) ?></td>
+        </tr>
+    </tbody>  
+</table>
+<br><br>
+<p class="poradnik"> Nie wiesz jak to działa? Sprawdź poradnik, który wytłumaczy ci wszystko krok po kroku! Kliknij <a class="pora" target= "_blank" href= "https://informatyk.edu.pl/adresacja-sieciowa-ipv4-obliczenia/">TUTAJ </a></p>
+</div>
 
 </div>
 <!-- STOPKA -->
